@@ -8,6 +8,7 @@ import { PAGE_TYPE_MAP } from "./core/constants";
 import { Typography, AppBar, Toolbar } from "@material-ui/core";
 import { LanguageContext } from "./languageContext";
 import { LANG } from "./core/texts";
+import Disha from "./components/Disha";
 
 function App() {
   const appLanguage = useContext(LanguageContext);
@@ -49,6 +50,9 @@ function App() {
           </AppBar>
 
           <Switch>
+            <Route exact path="/disha">
+              <Disha />
+            </Route>
             <Route exact path="/charts">
               <Main type="table" />
             </Route>

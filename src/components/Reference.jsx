@@ -7,8 +7,8 @@ function Reference({ updatedDate = "--" }) {
   return (
     <small>
       <FiClock size="1.25em" /> {appLanguage.lastUpdated}: <i>{updatedDate}</i>
-      References:
       <br />
+      References:
       <ol>
         <li>
           <a href="http://dhs.kerala.gov.in/" className="external">

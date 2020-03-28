@@ -17,7 +17,9 @@ export const LANG = {
     negativeCases: "Negative (total)",
     totalCases: "Confirmed (total)",
     postiveNew: "Positive (new)",
-    totalPositive: "Positive (total)"
+    totalPositive: "Positive (total)",
+    psySupportPerson: "Psychosocial support staff",
+    teleCounselling: "Tele counselling"
   },
   MALAYALAM: {
     appTitle: "കേരള കോവിഡ് കണക്ക് വിവരങ്ങൾ",
@@ -33,6 +35,8 @@ export const LANG = {
     negativeCases: "നെഗറ്റീവ് (ആകെ)",
     totalCases: "സ്ഥിതികരിച്ചത് (ആകെ)",
     postiveNew: "പോസിറ്റീവ് (പുതിയത്)",
-    totalPositive: "പോസിറ്റീവ് (ആകെ)"
+    totalPositive: "പോസിറ്റീവ് (ആകെ)",
+    psySupportPerson: "മാനസിക ആരോഗ്യ പ്രവർത്തകർ",
+    teleCounselling: "ടെലിഫോണിക് കൗൺസിലിങ് "
   }
 };

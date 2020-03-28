@@ -1,5 +1,11 @@
 @import "./styles/text.scss";
 
+.App {
+  padding-top: 75px;
+  ul li {
+    list-style: none;
+  }
+}
 .external {
   background-position: center right;
   background-repeat: no-repeat;
@@ -28,5 +34,11 @@ ul.summary-list {
     text-decoration: none;
     padding: 2px 7px;
     border-radius: 20px;
+  }
+}
+
+.icon-container {
+  svg {
+    margin-top: -5px;
   }
 }
