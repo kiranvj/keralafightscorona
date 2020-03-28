@@ -1,0 +1,32 @@
+@import "./styles/text.scss";
+
+.external {
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-image: url("/images/external-link-ltr-icon.png?325de");
+  background-image: linear-gradient(transparent, transparent),
+    url("/images/external-link-ltr-icon.svg?b4b84");
+  padding-right: 13px;
+}
+
+ul.summary-list {
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0px 3px 25px;
+    list-style: none;
+    &:last-child {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.top-10-states {
+  .sort-selected {
+    background-color: #3f51b5;
+    color: #fff;
+    text-decoration: none;
+    padding: 2px 7px;
+    border-radius: 20px;
+  }
+}
