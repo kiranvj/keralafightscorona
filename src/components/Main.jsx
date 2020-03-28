@@ -53,12 +53,12 @@ function Main({ type }) {
     setPageType(type);
   }, [type]);
   return (
-    <Box mt={5} pt={2}>
-      <div className="container mt-2 mb-3">
+    <Box>
+      <div className="container">
         {/* <TopMenu updatedDate={updatedDate} /> */}
         <Grid container>
           <Grid item xs>
-            <Box textAlign="center" mt={1}>
+            <Box textAlign="center">
               <div
                 className={clsx(
                   "date-chip",
