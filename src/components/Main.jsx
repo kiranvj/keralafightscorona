@@ -64,8 +64,8 @@ function Main({ type }) {
     setPageType(type);
   }, [type]);
   return (
-    <Box mt={5}>
-      <div className="container pt-5 mt-4 mb-3">
+    <Box mt={5} pt={1}>
+      <div className="container mt-4 mb-3">
         <TopMenu updatedDate={updatedDate} />
         <InfoBar data={data} totals={totals} />
         {pageType === PAGE_TYPE_TABLE ? (

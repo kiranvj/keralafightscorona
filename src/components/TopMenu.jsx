@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Grid } from "@material-ui/core";
-import { FiClock } from "react-icons/fi";
+
 import { LanguageContext } from "../languageContext";
 
 function TopMenu({ updatedDate }) {
@@ -8,17 +8,16 @@ function TopMenu({ updatedDate }) {
 
   return (
     <div className="text-size-lesser">
-      <Grid container spacing={2} alignItems="center" justify="space-between">
+      {/*       <Grid container spacing={2} alignItems="center" justify="space-between">
         <Grid item>
-          <FiClock size="1.25em" /> {appLanguage.lastUpdated}:{" "}
-          <i>{updatedDate}</i>
+          <FiClock size="1.25em" />
+          <small>
+            {" "}
+            {appLanguage.lastUpdated}: <i>{updatedDate}</i>
+          </small>
         </Grid>
-        <Grid item>
-          <a title="References" href="#reference-container">
-            Data source
-          </a>
-        </Grid>
-      </Grid>
+
+      </Grid> */}
     </div>
   );
 }

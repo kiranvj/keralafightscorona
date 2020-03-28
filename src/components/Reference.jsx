@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FiClock } from "react-icons/fi";
+import { LanguageContext } from "../languageContext";
 
 function Reference({ updatedDate = "--" }) {
+  const appLanguage = useContext(LanguageContext);
   return (
     <small>
-      <p>
-        Last updated: <i>{updatedDate}</i>
-      </p>
+      <FiClock size="1.25em" /> {appLanguage.lastUpdated}: <i>{updatedDate}</i>
       References:
       <br />
       <ol>
