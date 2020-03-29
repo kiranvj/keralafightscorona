@@ -1,15 +1,16 @@
 import React from "react";
+import { Box } from "@material-ui/core";
 
 function Footer() {
   return (
-    <div className="pt-5 text-center">
-      <small className="my-4">
+    <Box pt={5} textAlign="center">
+      <Box component="small" my={8}>
         &copy; Initiative by{" "}
         <a href="https://whatindiathinks.com" title="What India Thinks">
           WhatIndiaThinks Insights
         </a>
-      </small>
-    </div>
+      </Box>
+    </Box>
   );
 }
 export default Footer;

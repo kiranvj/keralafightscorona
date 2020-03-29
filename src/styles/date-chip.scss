@@ -13,6 +13,7 @@
   }
   &.date-chip-disabled {
     background-color: #afced8;
+    opacity: 0;
     cursor: auto;
     pointer-events: none;
   }

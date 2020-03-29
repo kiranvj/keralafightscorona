@@ -3,7 +3,10 @@ import { useEffect } from "react";
 
 function TweetsByHealthMinister() {
   useLayoutEffect(() => {
-    window.twttr && window.twttr.widgets && window.twttr.widgets.load();
+    window.twttr &&
+      window.twttr.widgets &&
+      typeof window.twttr.widgets.load === "function" &&
+      window.twttr.widgets.load();
   });
   return (
     <div>

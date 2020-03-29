@@ -1,3 +1,5 @@
+$primary-color: #3b6978;
+
 .text-count {
   font-size: 1.35rem;
 }
@@ -32,4 +34,10 @@
 .text-green,
 .text-color-recoveries {
   color: #00cc00;
+}
+
+a,
+a:link,
+a:visited {
+  color: $primary-color;
 }
