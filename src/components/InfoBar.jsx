@@ -39,8 +39,19 @@ function InfoBar({ data = {}, totals = {} }) {
         <Panel variant="small" title={appLanguage.totalPositive}>
           <div className="text-count">
             <Icon icon={GiGooeyEyedSun} />{" "}
-            <span className="text-color-active"></span>
-            {(data && data.totalPositive) || "--"}
+            <span className="text-color-active">
+              {(data && data.totalPositive) || "--"}
+            </span>
+          </div>
+        </Panel>
+      </Grid>
+      <Grid item xs={6} lg="auto">
+        <Panel variant="small" title={appLanguage.totalRecoveries}>
+          <div className="text-count">
+            <Icon icon={FiUserCheck} />{" "}
+            <span className="text-color-recoveries">
+              {(data && data.totalRecoveries) || "--"}
+            </span>
           </div>
         </Panel>
       </Grid>
@@ -61,6 +72,17 @@ function InfoBar({ data = {}, totals = {} }) {
             <span className="text-color-deaths">
               {" "}
               {(data && data.deaths) || "--"}
+            </span>
+          </div>
+        </Panel>
+      </Grid>
+      <Grid item xs={6} lg="auto">
+        <Panel variant="small" title={appLanguage.totalDeaths}>
+          <div className="text-count">
+            <Icon icon={MdRadioButtonChecked} />{" "}
+            <span className="text-color-deaths">
+              {" "}
+              {(data && data.totalDeaths) || "--"}
             </span>
           </div>
         </Panel>
