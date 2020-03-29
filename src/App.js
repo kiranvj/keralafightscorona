@@ -47,7 +47,7 @@ function App() {
                           />
                         </Link>
                       </Grid>
-                      <Grid item>
+                      <Grid item xs>
                         <Typography variant="h6">
                           {appLanguage.appTitle}
                         </Typography>
