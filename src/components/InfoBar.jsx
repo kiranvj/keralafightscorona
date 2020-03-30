@@ -76,6 +76,7 @@ function InfoBar({ data = {}, totals = {} }) {
           </div>
         </Panel>
       </Grid>
+
       <Grid item xs={6} lg="auto">
         <Panel variant="small" title={appLanguage.totalDeaths}>
           <div className="text-count">
@@ -84,6 +85,14 @@ function InfoBar({ data = {}, totals = {} }) {
               {" "}
               {(data && data.totalDeaths) || "--"}
             </span>
+          </div>
+        </Panel>
+      </Grid>
+      <Grid item xs={6} lg="auto">
+        <Panel variant="small" title={appLanguage.totalSamplesSendForTesting}>
+          <div className="text-count">
+            <Icon icon={GiEyedropper} />{" "}
+            {(data && data.totalSamplesSendForTesting) || "--"}
           </div>
         </Panel>
       </Grid>
@@ -121,14 +130,7 @@ function InfoBar({ data = {}, totals = {} }) {
           </div>
         </Panel>
       </Grid>
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.totalSamplesSendForTesting}>
-          <div className="text-count">
-            <Icon icon={GiEyedropper} />{" "}
-            {(data && data.totalSamplesSendForTesting) || "--"}
-          </div>
-        </Panel>
-      </Grid>
+
       <Grid item xs={6} lg="auto">
         <Panel variant="small" title={appLanguage.psySupportPerson}>
           <div className="text-count">
