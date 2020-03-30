@@ -35,7 +35,9 @@ $primary-color: #3b6978;
 .text-color-recoveries {
   color: #00cc00;
 }
-
+.text-nowrap {
+  white-space: nowrap;
+}
 a,
 a:link,
 a:visited {

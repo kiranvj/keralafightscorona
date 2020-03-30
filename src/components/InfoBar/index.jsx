@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import Panel from "./UI/Panel";
+import Panel from "../UI/Panel";
 import { Grid, Box } from "@material-ui/core";
-import { LanguageContext } from "../languageContext";
+import { LanguageContext } from "../../languageContext";
 import {
   FiEye,
   FiUserCheck,
@@ -14,45 +14,48 @@ import { MdRadioButtonChecked } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
 import { FaUserTie } from "react-icons/fa";
 import { IoMdBed } from "react-icons/io";
-import Icon from "./UI/Icon";
+import Icon from "../UI/Icon";
+import InfoBarItem from "./InfoBarItem";
 
-function InfoBar({ data = {}, totals = {} }) {
+function InfoBar(props) {
+  let data = props.data;
   const appLanguage = useContext(LanguageContext);
   return (
     <Grid container spacing={1} alignItems="stretch">
       <Grid item xs={6} lg="auto">
         <Panel variant="small" title={appLanguage.totalCases}>
-          <div className="text-count">{(data && data.totalCases) || "--"}</div>
+          <InfoBarItem {...props} dataKey="totalCases" upIsBad />
         </Panel>
       </Grid>
       <Grid item xs={6} lg="auto">
         <Panel variant="small" title={appLanguage.postiveNew}>
-          <div className="text-count">
-            <Icon icon={FiUserPlus} />{" "}
-            <span className="text-color-active">
-              {(data && data.postiveNew) || "--"}
-            </span>
-          </div>
+          <InfoBarItem
+            {...props}
+            dataKey="postiveNew"
+            upIsBad
+            countClass="text-color-active"
+          />
         </Panel>
       </Grid>
       <Grid item xs={6} lg="auto">
         <Panel variant="small" title={appLanguage.totalPositive}>
-          <div className="text-count">
-            <Icon icon={GiGooeyEyedSun} />{" "}
-            <span className="text-color-active">
-              {(data && data.totalPositive) || "--"}
-            </span>
-          </div>
+          <InfoBarItem
+            {...props}
+            dataKey="totalPositive"
+            upIsBad
+            countClass="text-color-active"
+            icon={GiGooeyEyedSun}
+          />
         </Panel>
       </Grid>
       <Grid item xs={6} lg="auto">
         <Panel variant="small" title={appLanguage.totalRecoveries}>
-          <div className="text-count">
-            <Icon icon={FiUserCheck} />{" "}
-            <span className="text-color-recoveries">
-              {(data && data.totalRecoveries) || "--"}
-            </span>
-          </div>
+          <InfoBarItem
+            {...props}
+            dataKey="totalRecoveries"
+            countClass="text-color-recoveries"
+            icon={FiUserCheck}
+          />
         </Panel>
       </Grid>
       <Grid item xs={6} lg="auto">
@@ -90,10 +93,11 @@ function InfoBar({ data = {}, totals = {} }) {
       </Grid>
       <Grid item xs={6} lg="auto">
         <Panel variant="small" title={appLanguage.totalSamplesSendForTesting}>
-          <div className="text-count">
-            <Icon icon={GiEyedropper} />{" "}
-            {(data && data.totalSamplesSendForTesting) || "--"}
-          </div>
+          <InfoBarItem
+            {...props}
+            dataKey="totalSamplesSendForTesting"
+            icon={GiEyedropper}
+          />
         </Panel>
       </Grid>
 
@@ -106,17 +110,16 @@ function InfoBar({ data = {}, totals = {} }) {
       </Grid>
       <Grid item xs={6} lg="auto">
         <Panel variant="small" title={appLanguage.underSurveillance}>
-          <div className="text-count">
-            <Icon icon={FiEye} /> {(data && data.underSurveillance) || "--"}
-          </div>
+          <InfoBarItem {...props} dataKey="underSurveillance" icon={FiEye} />
         </Panel>
       </Grid>
       <Grid item xs={6} lg="auto">
         <Panel variant="small" title={appLanguage.inHomeIsolation}>
-          <div className="text-count">
-            <Icon icon={AiOutlineHome} />{" "}
-            {(data && data.inHomeIsolation) || "--"}
-          </div>
+          <InfoBarItem
+            {...props}
+            dataKey="inHomeIsolation"
+            icon={AiOutlineHome}
+          />
         </Panel>
       </Grid>
       <Grid item xs={6} lg="auto">
@@ -124,10 +127,11 @@ function InfoBar({ data = {}, totals = {} }) {
           variant="small"
           title={appLanguage.inDesignatedIsolationFacilities}
         >
-          <div className="text-count">
-            <Icon icon={IoMdBed} />{" "}
-            {(data && data.inDesignatedIsolationFacilities) || "--"}
-          </div>
+          <InfoBarItem
+            {...props}
+            dataKey="inDesignatedIsolationFacilities"
+            icon={IoMdBed}
+          />
         </Panel>
       </Grid>
 
@@ -140,9 +144,7 @@ function InfoBar({ data = {}, totals = {} }) {
       </Grid>
       <Grid item xs={6} lg="auto">
         <Panel variant="small" title={appLanguage.teleCounselling}>
-          <div className="text-count">
-            <Icon icon={FaUserTie} /> {(data && data.teleCounselling) || "--"}
-          </div>
+          <InfoBarItem {...props} dataKey="teleCounselling" icon={FaUserTie} />
         </Panel>
       </Grid>
     </Grid>

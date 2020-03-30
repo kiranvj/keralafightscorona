@@ -8,13 +8,14 @@ import { PAGE_TYPE_TABLE } from "../core/constants";
 import ActiveVsDeath from "./ActiveVsDeath";
 import { Box, Chip } from "@material-ui/core";
 import Reference from "./Reference";
-import InfoBar from "./InfoBar";
 
 import { STATS, LAST_UPDATED } from "../data/stats";
 import clsx from "clsx";
 import TweetsByHealthMinister from "./TweetsByHealthMinister";
 import imgDisha from "../static/images/disha-call-center.jpg";
 import { Link } from "react-router-dom";
+import RightPane from "./RightPane";
+import InfoBar from "./InfoBar";
 
 function Main({ type }) {
   const [data, setData] = useState(null);
@@ -87,9 +88,15 @@ function Main({ type }) {
               </div>
             </Box>
 
-            <InfoBar data={data} totals={totals} />
+            <InfoBar
+              data={data}
+              fullData={fullData}
+              dataPointer={dataPointer}
+              totals={totals}
+            />
           </Grid>
           <Grid item xs={12} md="auto">
+            <RightPane />
             <Box my={2} textAlign="center">
               <Link to="/disha">
                 <img
