@@ -13,6 +13,9 @@ Idukki, and Wayanad ",126,6,6,0,0,5,0,676,42517
 30-03-2020,157283,156660,623,6991,6034,234,32,"Out of this 17 cases are from
 Kasaragod, 11 from Kannur and 2 each from Wayanad and Idukki.",213,17,2,1,0,0,0,849,77076
 31-03-2020,163129,162471,658,7485,6381,241,7,"Out of this 2 cases each from Thiruvananthapuram ,Kasaragod, and 1 each from Kollam,Kannur, and Thrissur",215,24,0,2,1,0,0,849,84166
+01-04-2020,164130,163508,622,7965,7256,265,24,"Out of this 12 from Kasaragod, 3
+from Ernakulam, 2 each from Thiruvananthapuram Thrissur, Kannur and
+Malappuram and 1 from Palakkad. ",237,26,2,2,0,0,0,947,120515
 `;
 
-export const LAST_UPDATED = "31-March-2020";
+export const LAST_UPDATED = "1-Apr-2020";
