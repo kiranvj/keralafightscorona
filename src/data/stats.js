@@ -16,6 +16,9 @@ Kasaragod, 11 from Kannur and 2 each from Wayanad and Idukki.",213,17,2,1,0,0,0,
 01-04-2020,164130,163508,622,7965,7256,265,24,"Out of this 12 from Kasaragod, 3
 from Ernakulam, 2 each from Thiruvananthapuram Thrissur, Kannur and
 Malappuram and 1 from Palakkad. ",237,26,2,2,0,0,0,947,120515
+02-04-2020,165934,165291,643,8456,7622,286,21," Out of this 8 from Kasaragod,
+5 from Idukki, 2 from Kollam, 1 each from Thiruvananthapuram, Pathanamthitta,
+Thrissur, Malappuram, Kozhikode, and Kannur. ",256,28,2,2,0,0,0,998,130817
 `;
 
-export const LAST_UPDATED = "1-Apr-2020";
+export const LAST_UPDATED = "2-Apr-2020";
