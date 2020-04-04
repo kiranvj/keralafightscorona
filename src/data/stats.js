@@ -18,4 +18,4 @@ from Ernakulam, 2 each from Thiruvananthapuram Thrissur, Kannur and
 Malappuram and 1 from Palakkad. ",237,26,2,2,0,0,0,947,120515
 `;
 
-export const LAST_UPDATED = "1-Apr-2020";
+export const LAST_UPDATED = "3-Apr-2020";

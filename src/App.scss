@@ -39,11 +39,37 @@ ul.summary-list {
 
 .icon-container {
   svg {
-    margin-top: -5px;
+    margin-top: 5px;
   }
 }
 
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.stat-title {
+  font-size: 0.825em;
+  word-break: break-all;
+}
+
+.stat-section {
+  border-radius: 5px;
+  border: 1px solid #dcedff;
+  padding: 10px;
+  background-color: #f9fbfd;
+  &.stat-highlight {
+    background-color: #ffeb3b;
+    border-color: #ffeb3b;
+  }
+}
+
+.diff-numbers {
+  font-size: 0.75em;
+  color: #747474;
+  font-weight: bold;
 }

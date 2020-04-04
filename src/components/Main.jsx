@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import csv from "csvtojson";
 import Grid from "@material-ui/core/Grid";
 import "../styles/date-chip.scss";
@@ -16,8 +16,10 @@ import imgDisha from "../static/images/disha-call-center.jpg";
 import { Link } from "react-router-dom";
 import RightPane from "./RightPane";
 import InfoBar from "./InfoBar";
+import { LanguageContext } from "../languageContext";
+import LangSelector from "./LangSelector";
 
-function Main({ type }) {
+function Main({ type, ...props }) {
   const [data, setData] = useState(null);
   const [fullData, setFullData] = useState([]);
   const [dataPointer, setDataPointer] = useState(0);
@@ -53,40 +55,47 @@ function Main({ type }) {
         {/* <TopMenu updatedDate={updatedDate} /> */}
         <Grid container>
           <Grid item xs={12} md>
-            <Box textAlign="center">
-              <div
-                className={clsx(
-                  "date-chip",
-                  dataPointer <= 0 ? "date-chip-disabled" : null
-                )}
-                onClick={() => {
-                  setDataPointer(dataPointer - 1);
-                }}
-              >
-                Prev
-              </div>
-              <div
-                onClick={() => {
-                  setDataPointer(fullData.length - 1);
-                }}
-                className="date-chip date-chip-selected"
-              >
-                {(data && data.date) || "--"}
-              </div>
-              <div
-                onClick={() => {
-                  setDataPointer(dataPointer + 1);
-                }}
-                className={clsx(
-                  "date-chip",
-                  dataPointer === fullData.length - 1
-                    ? "date-chip-disabled"
-                    : null
-                )}
-              >
-                Next
-              </div>
-            </Box>
+            <Grid container alignItems="center">
+              <Grid item xs>
+                <Box textAlign="center">
+                  <div
+                    className={clsx(
+                      "date-chip",
+                      dataPointer <= 0 ? "date-chip-disabled" : null
+                    )}
+                    onClick={() => {
+                      setDataPointer(dataPointer - 1);
+                    }}
+                  >
+                    Prev
+                  </div>
+                  <div
+                    onClick={() => {
+                      setDataPointer(fullData.length - 1);
+                    }}
+                    className="date-chip date-chip-selected"
+                  >
+                    {(data && data.date) || "--"}
+                  </div>
+                  <div
+                    onClick={() => {
+                      setDataPointer(dataPointer + 1);
+                    }}
+                    className={clsx(
+                      "date-chip",
+                      dataPointer === fullData.length - 1
+                        ? "date-chip-disabled"
+                        : null
+                    )}
+                  >
+                    Next
+                  </div>
+                </Box>
+              </Grid>
+              <Grid item xs="auto">
+                <LangSelector {...props} />
+              </Grid>
+            </Grid>
 
             <InfoBar
               data={data}

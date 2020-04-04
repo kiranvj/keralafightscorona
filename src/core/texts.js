@@ -4,7 +4,9 @@
 
 export const LANG = {
   ENGLISH: {
+    lang: "en",
     appTitle: "Kerala COVID-19 Dashboard",
+    summary: "Summary",
     lastUpdated: "Last updated",
     totalReported: "Total reported",
     activeCases: "Active cases",
@@ -21,10 +23,12 @@ export const LANG = {
     postiveNew: "Positive (new)",
     totalPositive: "Positive (total)",
     psySupportPerson: "Psychosocial support staff",
-    teleCounselling: "Tele counselling"
+    teleCounselling: "Tele counselling",
   },
   MALAYALAM: {
+    lang: "ml",
     appTitle: "കേരള കോവിഡ് കണക്ക് വിവരങ്ങൾ",
+    summary: "ഏറ്റവും പുതിയ കണക്ക്",
     lastUpdated: "അവസാന പുതുക്കല്‍",
     totalReported: "ആകെ സ്ഥിരീകരണം",
     activeCases: "പോസിറ്റീവ്",
@@ -41,6 +45,6 @@ export const LANG = {
     postiveNew: "പോസിറ്റീവ് (പുതിയത്)",
     totalPositive: "പോസിറ്റീവ് (ആകെ)",
     psySupportPerson: "മാനസിക ആരോഗ്യ പ്രവർത്തകർ",
-    teleCounselling: "ടെലിഫോണിക് കൗൺസിലിങ് "
-  }
+    teleCounselling: "ടെലിഫോണിക് കൗൺസിലിങ് ",
+  },
 };

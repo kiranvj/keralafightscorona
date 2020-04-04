@@ -1,4 +1,4 @@
-import React, { useContext, lazy, Suspense } from "react";
+import React, { useContext, lazy, Suspense, useState, useEffect } from "react";
 import "./App.scss";
 import Footer from "./components/Footer";
 import imgVirus from "./static/images/virus.png";
@@ -9,7 +9,7 @@ import {
   AppBar,
   Toolbar,
   Grid,
-  Container
+  Container,
 } from "@material-ui/core";
 import { LanguageContext } from "./languageContext";
 import { LANG } from "./core/texts";
@@ -19,10 +19,14 @@ const Main = lazy(() => import("./components/Main"));
 
 function App() {
   const appLanguage = useContext(LanguageContext);
+  const [lang, setLang] = useState("ml");
+
   return (
     <Container>
       <Suspense fallback={<div>Loading...</div>}>
-        <LanguageContext.Provider value={LANG.MALAYALAM}>
+        <LanguageContext.Provider
+          value={lang === "ml" ? LANG.MALAYALAM : LANG.ENGLISH}
+        >
           <Router>
             <div className="App">
               <AppBar position="fixed" style={{ background: "#3b6978" }}>
@@ -68,7 +72,7 @@ function App() {
                   <Main type={PAGE_TYPE_MAP} />
                 </Route>
                 <Route path="/">
-                  <Main type="table" />
+                  <Main type="table" setLang={setLang} />
                 </Route>
               </Switch>
               <Footer />
