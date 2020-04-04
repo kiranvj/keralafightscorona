@@ -24,4 +24,4 @@ Thrissur, Malappuram, Kozhikode, and Kannur. ",256,28,2,2,0,0,0,998,130817
 ",251,42,14,2,0,14,,998,130817
 `;
 
-export const LAST_UPDATED = "2-Apr-2020";
+export const LAST_UPDATED = "3-Apr-2020";

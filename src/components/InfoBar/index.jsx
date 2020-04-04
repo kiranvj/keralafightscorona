@@ -1,153 +1,188 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Panel from "../UI/Panel";
-import { Grid, Box } from "@material-ui/core";
+import {
+  Grid,
+  Box,
+  Divider,
+  List,
+  ListItem,
+  ListItemText,
+} from "@material-ui/core";
 import { LanguageContext } from "../../languageContext";
 import {
   FiEye,
   FiUserCheck,
   FiUserMinus,
   FiUserPlus,
-  FiUsers
+  FiUsers,
 } from "react-icons/fi";
 import { GiEyedropper, GiGooeyEyedSun } from "react-icons/gi";
 import { MdRadioButtonChecked } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
 import { FaUserTie } from "react-icons/fa";
 import { IoMdBed } from "react-icons/io";
-import Icon from "../UI/Icon";
 import InfoBarItem from "./InfoBarItem";
 
 function InfoBar(props) {
-  let data = props.data;
+  //let data = props.data;
   const appLanguage = useContext(LanguageContext);
+  const [showMoreTotal, setShowMoreTotal] = useState(false);
   return (
-    <Grid container spacing={1} alignItems="stretch">
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.totalCases}>
-          <InfoBarItem {...props} dataKey="totalCases" upIsBad />
-        </Panel>
-      </Grid>
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.postiveNew}>
+    <>
+      <Box mb={2} fontWeight="bold">
+        {appLanguage.summary}
+      </Box>
+      <Grid container spacing={1} alignItems="stretch">
+        <Grid item xs={12} md={6}>
           <InfoBarItem
+            title={appLanguage.totalCases}
             {...props}
-            dataKey="postiveNew"
+            dataKey="totalCases"
             upIsBad
-            countClass="text-color-active"
           />
-        </Panel>
-      </Grid>
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.totalPositive}>
+        </Grid>
+        <Grid item xs={12} md={6}>
           <InfoBarItem
             {...props}
+            title={appLanguage.totalPositive}
             dataKey="totalPositive"
+            highlight
             upIsBad
             countClass="text-color-active"
             icon={GiGooeyEyedSun}
           />
-        </Panel>
-      </Grid>
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.totalRecoveries}>
+        </Grid>
+        <Grid item xs={12} md={6}>
           <InfoBarItem
             {...props}
+            title={appLanguage.totalRecoveries}
             dataKey="totalRecoveries"
             countClass="text-color-recoveries"
             icon={FiUserCheck}
           />
-        </Panel>
-      </Grid>
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.recoveries}>
-          <div className="text-count">
-            <Icon icon={FiUserCheck} />{" "}
-            <span className="text-color-recoveries">
-              {(data && data.recoveries) || "--"}
-            </span>
-          </div>
-        </Panel>
-      </Grid>
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.deaths}>
-          <div className="text-count">
-            <Icon icon={MdRadioButtonChecked} />{" "}
-            <span className="text-color-deaths">
-              {" "}
-              {(data && data.deaths) || "--"}
-            </span>
-          </div>
-        </Panel>
-      </Grid>
-
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.totalDeaths}>
-          <div className="text-count">
-            <Icon icon={MdRadioButtonChecked} />{" "}
-            <span className="text-color-deaths">
-              {" "}
-              {(data && data.totalDeaths) || "--"}
-            </span>
-          </div>
-        </Panel>
-      </Grid>
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.totalSamplesSendForTesting}>
+        </Grid>
+        <Grid item xs={12} md={6}>
           <InfoBarItem
             {...props}
-            dataKey="totalSamplesSendForTesting"
-            icon={GiEyedropper}
+            title={appLanguage.totalDeaths}
+            dataKey="totalDeaths"
+            upIsBad
+            countClass="text-color-deaths"
+            icon={MdRadioButtonChecked}
           />
-        </Panel>
-      </Grid>
-
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.negativeCases}>
-          <div className="text-count">
-            <Icon icon={FiUserMinus} /> {(data && data.negativeCases) || "--"}
+        </Grid>
+        <Grid item xs={12}>
+          <div className="text-center">
+            <a
+              href="/#"
+              onClick={() => {
+                setShowMoreTotal(!showMoreTotal);
+              }}
+            >
+              {showMoreTotal ? "Hide" : "Show more"}
+            </a>
           </div>
-        </Panel>
+        </Grid>
+        {showMoreTotal ? (
+          <>
+            <Grid item xs={12} md={6}>
+              <InfoBarItem
+                {...props}
+                title={appLanguage.negativeCases}
+                dataKey="negativeCases"
+                icon={FiUserMinus}
+              />
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <InfoBarItem
+                {...props}
+                title={appLanguage.totalSamplesSendForTesting}
+                dataKey="totalSamplesSendForTesting"
+                icon={GiEyedropper}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <InfoBarItem
+                {...props}
+                upIsBad
+                title={appLanguage.underSurveillance}
+                dataKey="underSurveillance"
+                icon={FiEye}
+              />
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <InfoBarItem
+                {...props}
+                upIsBad
+                title={appLanguage.inHomeIsolation}
+                dataKey="inHomeIsolation"
+                icon={AiOutlineHome}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <InfoBarItem
+                {...props}
+                upIsBad
+                title={appLanguage.inDesignatedIsolationFacilities}
+                dataKey="inDesignatedIsolationFacilities"
+                icon={IoMdBed}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <InfoBarItem
+                {...props}
+                title={appLanguage.psySupportPerson}
+                dataKey="psySupportPerson"
+                icon={FiUsers}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <InfoBarItem
+                {...props}
+                title={appLanguage.teleCounselling}
+                dataKey="teleCounselling"
+                icon={FaUserTie}
+              />
+            </Grid>
+          </>
+        ) : null}
       </Grid>
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.underSurveillance}>
-          <InfoBarItem {...props} dataKey="underSurveillance" icon={FiEye} />
-        </Panel>
-      </Grid>
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.inHomeIsolation}>
+      <Box my={2} fontWeight="bold">
+        {(props.data && props.data.date) || "--"}
+      </Box>
+      <Grid container spacing={1}>
+        <Grid item xs={12} md={6}>
           <InfoBarItem
             {...props}
-            dataKey="inHomeIsolation"
-            icon={AiOutlineHome}
+            title={appLanguage.postiveNew}
+            dataKey="postiveNew"
+            upIsBad
+            countClass="text-color-active"
           />
-        </Panel>
-      </Grid>
-      <Grid item xs={6} lg="auto">
-        <Panel
-          variant="small"
-          title={appLanguage.inDesignatedIsolationFacilities}
-        >
+        </Grid>
+        <Grid item xs={12} md={6}>
           <InfoBarItem
             {...props}
-            dataKey="inDesignatedIsolationFacilities"
-            icon={IoMdBed}
+            title={appLanguage.recoveries}
+            dataKey="recoveries"
+            countClass="text-color-recoveries"
+            icon={FiUserCheck}
           />
-        </Panel>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <InfoBarItem
+            {...props}
+            title={appLanguage.deaths}
+            dataKey="deaths"
+            upIsBad
+            countClass="text-color-deaths"
+            icon={MdRadioButtonChecked}
+          />
+        </Grid>
       </Grid>
-
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.psySupportPerson}>
-          <div className="text-count">
-            <Icon icon={FiUsers} /> {(data && data.psySupportPerson) || "--"}
-          </div>
-        </Panel>
-      </Grid>
-      <Grid item xs={6} lg="auto">
-        <Panel variant="small" title={appLanguage.teleCounselling}>
-          <InfoBarItem {...props} dataKey="teleCounselling" icon={FaUserTie} />
-        </Panel>
-      </Grid>
-    </Grid>
+    </>
   );
 }
 
