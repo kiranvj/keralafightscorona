@@ -19,6 +19,9 @@ Malappuram and 1 from Palakkad. ",237,26,2,2,0,0,0,947,120515
 02-04-2020,165934,165291,643,8456,7622,286,21," Out of this 8 from Kasaragod,
 5 from Idukki, 2 from Kollam, 1 each from Thiruvananthapuram, Pathanamthitta,
 Thrissur, Malappuram, Kozhikode, and Kannur. ",256,28,2,2,0,0,0,998,130817
+03-04-2020,169997,169291,706,9139,8126,295,9," Out of this 7 from Kasaragod,
+1 each from Thrissur and Kannur. 
+",251,42,14,2,0,14,,998,130817
 `;
 
 export const LAST_UPDATED = "2-Apr-2020";
