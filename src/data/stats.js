@@ -24,6 +24,8 @@ Thrissur, Malappuram, Kozhikode, and Kannur. ",256,28,2,2,0,0,0,998,130817
 ",251,42,14,2,0,14,,998,130817
 04-04-2020,171355,170621,734,9744,8586,306,11," Out of this 6 from Kasaragod,
 1 each from Kollam,Alappuzha, Ernakulam, Palakkad and Kannur. ",254,50,8,2,0,8,0,1015,152699
+05-04-2020,158617,157841,776,10221,9300,314,8,"Out of this 5 from Kozhikode, 1 each
+from Pathanamthitta, Kannur and Kasaragod.",256,56,6,2,0,8,0,1015,162515
 `;
 
 export const LAST_UPDATED = "3-Apr-2020";
