@@ -28,6 +28,9 @@ Thrissur, Malappuram, Kozhikode, and Kannur. ",256,28,2,2,0,0,0,998,130817
 from Pathanamthitta, Kannur and Kasaragod.",256,56,6,2,0,8,0,1015,162517
 06-04-2020,152804,152009,795,10716,9607,327,13,"Out of this 9 from Kasargod, 2 from
 Malappuram, 1 each from Kollam and Pathanamthitta.",266,59,3,2,0,1,0,1058,172050
+07-04-2020,146686,145934,752,11232,10250,336,9,"5 from Kannur, 4 from
+Ernakulam and 1 each from Thiruvananthapuram, Alappuzha and Kasaragod has been
+declared negative.",263,71,12,2,0,12,0,1058,176575
 `;
 
 export const LAST_UPDATED = "7-Apr-2020";
