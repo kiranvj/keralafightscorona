@@ -109,11 +109,12 @@ function Main({ type, ...props }) {
               <Grid item xs={12} md={6} xl={4}>
                 <Trends1
                   fullData={fullData}
-                  dataKey="inDesignatedIsolationFacilities"
-                  dataColor="#56D47C"
-                  dataKeyName="In Isolation Facility"
+                  dataKey="postiveNew"
+                  dataColor="#F58B00"
+                  dataKeyName="New Positive"
                 />
               </Grid>
+
               <Grid item xs={12} md={6} xl={4}>
                 <Trends1
                   fullData={fullData}
@@ -122,6 +123,15 @@ function Main({ type, ...props }) {
                   dataKeyName="Positive"
                 />
               </Grid>
+              <Grid item xs={12} md={6} xl={4}>
+                <Trends1
+                  fullData={fullData}
+                  dataKey="inDesignatedIsolationFacilities"
+                  dataColor="#56D47C"
+                  dataKeyName="In Isolation Facility"
+                />
+              </Grid>
+
               <Grid item xs={12} md={6} xl={4}>
                 <Trends1
                   fullData={fullData}
