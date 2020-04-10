@@ -37,4 +37,4 @@ each from Kasargod, Pathanamthitta and Thrissur.",259,84,13,2,0,13,0,1058,181347
 been declared negative.",258,97,13,2,0,13,0,1058,183678
 `;
 
-export const LAST_UPDATED = "7-Apr-2020";
+export const LAST_UPDATED = "10-Apr-2020";

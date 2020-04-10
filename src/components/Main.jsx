@@ -18,6 +18,7 @@ import RightPane from "./RightPane";
 import InfoBar from "./InfoBar";
 import { LanguageContext } from "../languageContext";
 import LangSelector from "./LangSelector";
+import Trends1 from "./charts/Trends1";
 
 function Main({ type, ...props }) {
   const [data, setData] = useState(null);
@@ -54,7 +55,7 @@ function Main({ type, ...props }) {
       <div className="container">
         {/* <TopMenu updatedDate={updatedDate} /> */}
         <Grid container>
-          <Grid item xs={12} md>
+          <Grid item xs={12} md={8} lg={9}>
             <Grid container alignItems="center">
               <Grid item xs>
                 <Box textAlign="center">
@@ -96,13 +97,40 @@ function Main({ type, ...props }) {
                 <LangSelector {...props} />
               </Grid>
             </Grid>
-
-            <InfoBar
-              data={data}
-              fullData={fullData}
-              dataPointer={dataPointer}
-              totals={totals}
-            />
+            <Box mb={2}>
+              <InfoBar
+                data={data}
+                fullData={fullData}
+                dataPointer={dataPointer}
+                totals={totals}
+              />
+            </Box>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={6} xl={4}>
+                <Trends1
+                  fullData={fullData}
+                  dataKey="inDesignatedIsolationFacilities"
+                  dataColor="#56D47C"
+                  dataKeyName="In Isolation Facility"
+                />
+              </Grid>
+              <Grid item xs={12} md={6} xl={4}>
+                <Trends1
+                  fullData={fullData}
+                  dataKey="totalPositive"
+                  dataColor="#ff0000"
+                  dataKeyName="Positive"
+                />
+              </Grid>
+              <Grid item xs={12} md={6} xl={4}>
+                <Trends1
+                  fullData={fullData}
+                  dataKey="inHomeIsolation"
+                  dataColor="#DA6124"
+                  dataKeyName="Home Isolation"
+                />
+              </Grid>
+            </Grid>
           </Grid>
           <Grid item xs={12} md="auto">
             <RightPane />
