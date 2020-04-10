@@ -5,9 +5,13 @@ function Footer() {
   return (
     <Box pt={5} textAlign="center">
       <Box component="small" my={8}>
-        &copy; Initiative by{" "}
-        <a href="https://whatindiathinks.com" title="What India Thinks">
-          WhatIndiaThinks Insights
+        &copy; Hand crafted with{" "}
+        <span role="img" aria-label="love of nature">
+          💚
+        </span>{" "}
+        by{" "}
+        <a href="https://kiranvj.com" title="Kiran Paul VJ">
+          Kiran Paul VJ
         </a>
       </Box>
     </Box>

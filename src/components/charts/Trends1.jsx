@@ -6,7 +6,6 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Legend,
   Line,
   ResponsiveContainer,
 } from "recharts";
@@ -29,7 +28,7 @@ function Trends1({ fullData, dataKey, dataKeyName, dataColor }) {
           };
         })) ||
       [];
-    console.log(newData);
+    //console.log(newData);
     setChartData(newData);
   }, [fullData, dataKey]);
 
@@ -43,7 +42,7 @@ function Trends1({ fullData, dataKey, dataKeyName, dataColor }) {
             {fullData && fullData[fullData.length - 1] ? (
               <span>
                 {" "}
-                -{" "}
+                :{" "}
                 <span style={{ color: dataColor }}>
                   {fullData[fullData.length - 1][dataKey]}
                 </span>
@@ -63,7 +62,7 @@ function Trends1({ fullData, dataKey, dataKeyName, dataColor }) {
               margin={{
                 top: 20,
                 right: 5,
-                left: 5,
+                left: 0,
                 bottom: 5,
               }}
             >
@@ -72,7 +71,8 @@ function Trends1({ fullData, dataKey, dataKeyName, dataColor }) {
               <YAxis />
               <Tooltip />
               <Line
-                type="monotone"
+                /* type="monotone" */
+                type="linear"
                 dataKey={dataKey}
                 name={dataKeyName}
                 stroke={dataColor || "#000000"}
