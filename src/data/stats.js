@@ -35,10 +35,12 @@ declared negative.",263,71,12,2,0,12,0,1058,176575
 each from Kasargod, Pathanamthitta and Thrissur.",259,84,13,2,0,13,0,1058,181347
 09-04-2020,136195,135472,723,12710,11469,357,12,"6 from Ernakulam (1 foreigner and 2 Kannur), 3 from Kannur, 2 each from Idukki, and Malappuram has
 been declared negative .",258,97,13,2,0,13,0,1058,183678
-10-4-2020,129751,129021,730,13339,12335,364,7," of which 3 cases are from Kasargod
+10-04-2020,129751,129021,730,13339,12335,364,7," of which 3 cases are from Kasargod
 and 2 each from Malappuram and Kannur.",238,124,27,2,0,27,0,1058,185547
-11-4-2020,123490,122676,814,14163,12818,373,10,"of which 7 are from Kannur, 2 from
+11-04-2020,123490,122676,814,14163,12818,373,10,"of which 7 are from Kannur, 2 from
 Kasargod and 1 from Kozhikkode",228,142,19,3,1,19,0,1058,187465
+12-04-2020,116941,116125,816,14989,13802,375,2,"of which 1 each are from
+Pathanamthitta and Kannur. ",194,178,36,3,0,36,0,1058,192261
 `;
 
 export const LAST_UPDATED = "10-Apr-2020";
