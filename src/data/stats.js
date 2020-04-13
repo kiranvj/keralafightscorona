@@ -45,4 +45,4 @@ Pathanamthitta and Kannur. ",194,178,36,3,0,36,0,1058,192261
 Palakkad.",178,197,19,3,0,19,0,1058,195161
 `;
 
-export const LAST_UPDATED = "10-Apr-2020";
+export const LAST_UPDATED = "13-Apr-2020";
