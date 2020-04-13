@@ -41,6 +41,8 @@ and 2 each from Malappuram and Kannur.",238,124,27,2,0,27,0,1058,185547
 Kasargod and 1 from Kozhikkode",228,142,19,3,1,19,0,1058,187465
 12-04-2020,116941,116125,816,14989,13802,375,2,"of which 1 each are from
 Pathanamthitta and Kannur. ",194,178,36,3,0,36,0,1058,192261
+13-04-2020,112183,111468,715,15683,14829,378,3,"of which 2 from Kannur and 1 from
+Palakkad.",178,197,19,3,0,19,0,1058,195161
 `;
 
 export const LAST_UPDATED = "10-Apr-2020";
