@@ -45,6 +45,7 @@ Pathanamthitta and Kannur. ",194,178,36,3,0,36,0,1058,192261
 Palakkad.",178,197,19,3,0,19,0,1058,195161
 14-04-2020,107075,106511,564,16235,15488,386,8,"of which 4 from Kannur, 3 from
 Kozhikode and 1 from Kasaragod.",173,210,13,3,0,13,0,1058,195161
+15-04-2020,97464,96942,522,16745,16002,387,1,from Kannur have been declared positive. ,167,217,7,3,0,7,0,1058,202189
 `;
 
 export const LAST_UPDATED = "13-Apr-2020";
